@@ -1,0 +1,44 @@
+{
+    "description": "Test cases for 424. Longest Repeating Character Replacement",
+    "tests": [
+        {
+            "input": {
+                "s": "ABAB",
+                "k": 2
+            },
+            "expectedOutput": 4
+        },
+        {
+            "input": {
+                "s": "AABABBA",
+                "k": 1
+            },
+            "expectedOutput": 4
+        },
+        {
+            "input": {
+                "s": "AAAA",
+                "k": 2
+            },
+            "expectedOutput": 4
+        },
+        {
+            "input": {
+                "s": "ABCDE",
+                "k": 1
+            },
+            "expectedOutput": 2
+        },
+        {
+            "input": {
+                "s": "KRSCDCSONAJNHLBMDQGIFCPEKPOHQIHLTDIQGEKLRLCQNBOHNDQGHJPNDQPERNFSSSRDEQLFPCCCARFMDLHADJADAGNNSBNCJQOF",
+                "k": 4
+            },
+            "expectedOutput": 7
+        }
+    ],
+    "constraints": {
+        "s.length": {"min": 1, "max": 1000000},
+        "k": {"min": 0, "max": 1000000}
+    }
+}
