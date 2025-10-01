@@ -1,0 +1,30 @@
+{
+    "description": "Test cases for 567. Permutation in String",
+    "tests": [
+        {
+            "input": {
+                "s1": "ab",
+                "s2": "eidbaooo"
+            },
+            "expectedOutput": true
+        },
+        {
+            "input": {
+                "s1": "ab",
+                "s2": "eidboaoo"
+            },
+            "expectedOutput": false
+        },
+        {
+            "input": {
+                "s1": "adc",
+                "s2": "dcda"
+            },
+            "expectedOutput": true
+        }
+    ],
+    "constraints": {
+        "s1.length": {"min": 1, "max": 10000},
+        "s2.length": {"min": 1, "max": 10000}
+    }
+}
