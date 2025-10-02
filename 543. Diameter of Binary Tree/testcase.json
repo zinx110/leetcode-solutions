@@ -1,0 +1,35 @@
+{
+    "description": "Test cases for 543. Diameter of Binary Tree",
+    "tests": [
+        {
+            "input": {
+                "root": [1, 2, 3, 4, 5]
+            },
+            "expectedOutput": 3
+        },
+        {
+            "input": {
+                "root": [1, 2]
+            },
+            "expectedOutput": 1
+        },
+        {
+            "input": {
+                "root": [1]
+            },
+            "expectedOutput": 0
+        },
+        {
+            "input": {
+                "root": [4, -7, -3, null, null, -9, -3, 9, -7, -4, null, 6, null, -6, -6, null, null, 0, 6, 5, null, 9, null, null, -1, -4, null, null, null, -2]
+            },
+            "expectedOutput": 8
+        }
+    ],
+    "constraints": {
+        "numberOfNodes": {"min": 1, "max": 10000},
+        "nodeValue": {"min": -100, "max": 100}
+    }
+}
+
+
