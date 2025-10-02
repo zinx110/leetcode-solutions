@@ -1,0 +1,47 @@
+{
+    "description": "Test cases for 110. Balanced Binary Tree",
+    "tests": [
+        {
+            "input": {
+                "root": [3, 9, 20, null, null, 15, 7]
+            },
+            "expectedOutput": true
+        },
+        {
+            "input": {
+                "root": [1, 2, 2, 3, 3, null, null, 4, 4]
+            },
+            "expectedOutput": false
+        },
+        {
+            "input": {
+                "root": []
+            },
+            "expectedOutput": true
+        },
+        {
+            "input": {
+                "root": [1]
+            },
+            "expectedOutput": true
+        },
+        {
+            "input": {
+                "root": [1, 2, 3, 4, 5, 6, null, 8]
+            },
+            "expectedOutput": true
+        },
+        {
+            "input": {
+                "root": [1, 2, null, 3, null, 4]
+            },
+            "expectedOutput": false
+        }
+    ],
+    "constraints": {
+        "numberOfNodes": {"min": 0, "max": 5000},
+        "nodeValue": {"min": -10000, "max": 10000}
+    }
+}
+
+
