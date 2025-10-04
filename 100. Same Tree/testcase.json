@@ -1,0 +1,53 @@
+{
+    "description": "Test cases for 100. Same Tree",
+    "tests": [
+        {
+            "input": {
+                "p": [1, 2, 3],
+                "q": [1, 2, 3]
+            },
+            "expectedOutput": true
+        },
+        {
+            "input": {
+                "p": [1, 2],
+                "q": [1, null, 2]
+            },
+            "expectedOutput": false
+        },
+        {
+            "input": {
+                "p": [1, 2, 1],
+                "q": [1, 1, 2]
+            },
+            "expectedOutput": false
+        },
+        {
+            "input": {
+                "p": [],
+                "q": []
+            },
+            "expectedOutput": true
+        },
+        {
+            "input": {
+                "p": [1],
+                "q": [1]
+            },
+            "expectedOutput": true
+        },
+        {
+            "input": {
+                "p": [1],
+                "q": []
+            },
+            "expectedOutput": false
+        }
+    ],
+    "constraints": {
+        "numberOfNodes": {"min": 0, "max": 100},
+        "nodeValue": {"min": -10000, "max": 10000}
+    }
+}
+
+
