@@ -1,0 +1,53 @@
+{
+    "description": "Test cases for 235. Lowest Common Ancestor of a Binary Search Tree",
+    "tests": [
+        {
+            "input": {
+                "root": [6, 2, 8, 0, 4, 7, 9, null, null, 3, 5],
+                "p": 2,
+                "q": 8
+            },
+            "expectedOutput": 6
+        },
+        {
+            "input": {
+                "root": [6, 2, 8, 0, 4, 7, 9, null, null, 3, 5],
+                "p": 2,
+                "q": 4
+            },
+            "expectedOutput": 2
+        },
+        {
+            "input": {
+                "root": [2, 1],
+                "p": 2,
+                "q": 1
+            },
+            "expectedOutput": 2
+        },
+        {
+            "input": {
+                "root": [6, 2, 8, 0, 4, 7, 9, null, null, 3, 5],
+                "p": 3,
+                "q": 5
+            },
+            "expectedOutput": 4
+        },
+        {
+            "input": {
+                "root": [6, 2, 8, 0, 4, 7, 9, null, null, 3, 5],
+                "p": 0,
+                "q": 5
+            },
+            "expectedOutput": 2
+        }
+    ],
+    "constraints": {
+        "numberOfNodes": {"min": 2, "max": 100000},
+        "nodeValue": {"min": -1000000000, "max": 1000000000},
+        "uniqueValues": true,
+        "nodesExist": true
+    }
+}
+
+
