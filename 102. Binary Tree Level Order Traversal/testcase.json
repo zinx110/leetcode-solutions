@@ -1,0 +1,41 @@
+{
+    "description": "Test cases for 102. Binary Tree Level Order Traversal",
+    "tests": [
+        {
+            "input": {
+                "root": [3, 9, 20, null, null, 15, 7]
+            },
+            "expectedOutput": [[3], [9, 20], [15, 7]]
+        },
+        {
+            "input": {
+                "root": [1]
+            },
+            "expectedOutput": [[1]]
+        },
+        {
+            "input": {
+                "root": []
+            },
+            "expectedOutput": []
+        },
+        {
+            "input": {
+                "root": [1, 2, 3, 4, 5, 6, 7]
+            },
+            "expectedOutput": [[1], [2, 3], [4, 5, 6, 7]]
+        },
+        {
+            "input": {
+                "root": [1, 2, null, 3, null, 4, null, 5]
+            },
+            "expectedOutput": [[1], [2], [3], [4], [5]]
+        }
+    ],
+    "constraints": {
+        "numberOfNodes": {"min": 0, "max": 2000},
+        "nodeValue": {"min": -1000, "max": 1000}
+    }
+}
+
+
