@@ -1,0 +1,47 @@
+{
+    "description": "Test cases for 98. Validate Binary Search Tree",
+    "tests": [
+        {
+            "input": {
+                "root": [2, 1, 3]
+            },
+            "expectedOutput": true
+        },
+        {
+            "input": {
+                "root": [5, 1, 4, null, null, 3, 6]
+            },
+            "expectedOutput": false
+        },
+        {
+            "input": {
+                "root": [1]
+            },
+            "expectedOutput": true
+        },
+        {
+            "input": {
+                "root": [1, 1]
+            },
+            "expectedOutput": false
+        },
+        {
+            "input": {
+                "root": [10, 5, 15, null, null, 6, 20]
+            },
+            "expectedOutput": false
+        },
+        {
+            "input": {
+                "root": [5, 1, 6, null, null, 4, 7]
+            },
+            "expectedOutput": false
+        }
+    ],
+    "constraints": {
+        "numberOfNodes": {"min": 1, "max": 10000},
+        "nodeValue": {"min": -2147483648, "max": 2147483647}
+    }
+}
+
+
