@@ -20,3 +20,24 @@ class Solution:
             return dfs(node.left, highVal = node.val, lowVal = lowVal) and dfs(node.right, highVal = highVal, lowVal = node.val)
 
         return dfs(root)
+
+
+from collections import deque
+
+class Solution2: #bfs
+    def isValidBST(self, root: Optional[TreeNode]) -> bool:
+        
+        que = deque()
+        que.append((root, None, None))
+        while len(que) > 0:
+            node, low, high = que.popleft()
+            if low != None and low >= node.val:
+                return False
+            if high != None and high <= node.val:
+                return False
+            if node.left != None:
+                que.append((node.left, low, node.val))
+            if node.right != None:
+                que.append((node.right, node.val, high))
+        return True
+            
