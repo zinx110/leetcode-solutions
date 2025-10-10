@@ -1,0 +1,47 @@
+{
+    "description": "Test cases for 230. Kth Smallest Element in a BST",
+    "tests": [
+        {
+            "input": {
+                "root": [3, 1, 4, null, 2],
+                "k": 1
+            },
+            "expectedOutput": 1
+        },
+        {
+            "input": {
+                "root": [5, 3, 6, 2, 4, null, null, 1],
+                "k": 3
+            },
+            "expectedOutput": 3
+        },
+        {
+            "input": {
+                "root": [1],
+                "k": 1
+            },
+            "expectedOutput": 1
+        },
+        {
+            "input": {
+                "root": [5, 3, 6, 2, 4, null, null, 1],
+                "k": 1
+            },
+            "expectedOutput": 1
+        },
+        {
+            "input": {
+                "root": [5, 3, 6, 2, 4, null, null, 1],
+                "k": 4
+            },
+            "expectedOutput": 4
+        }
+    ],
+    "constraints": {
+        "numberOfNodes": {"min": 1, "max": 10000},
+        "k": {"min": 1, "max": "n"},
+        "nodeValue": {"min": 0, "max": 10000}
+    }
+}
+
+
