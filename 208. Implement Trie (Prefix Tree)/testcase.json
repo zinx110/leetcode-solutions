@@ -1,0 +1,25 @@
+{
+    "description": "Test cases for 208. Implement Trie (Prefix Tree)",
+    "tests": [
+        {
+            "input": {
+                "commands": ["Trie", "insert", "search", "search", "startsWith", "insert", "search"],
+                "arguments": [[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]]
+            },
+            "expectedOutput": [null, null, true, false, true, null, true]
+        },
+        {
+            "input": {
+                "commands": ["Trie", "insert", "insert", "search", "startsWith", "search"],
+                "arguments": [[], ["hello"], ["helium"], ["hello"], ["hel"], ["helicopter"]]
+            },
+            "expectedOutput": [null, null, null, true, true, false]
+        }
+    ],
+    "constraints": {
+        "wordLength": {"min": 1, "max": 2000},
+        "prefixLength": {"min": 1, "max": 2000},
+        "maxCalls": 30000,
+        "charset": "lowercase English letters"
+    }
+}
