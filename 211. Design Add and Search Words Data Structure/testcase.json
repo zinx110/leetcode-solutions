@@ -1,0 +1,32 @@
+{
+    "description": "Test cases for 211. Design Add and Search Words Data Structure",
+    "tests": [
+        {
+            "input": {
+                "operations": ["WordDictionary", "addWord", "addWord", "addWord", "search", "search", "search", "search"],
+                "arguments": [[], ["bad"], ["dad"], ["mad"], ["pad"], ["bad"], [".ad"], ["b.."]]
+            },
+            "expectedOutput": [null, null, null, null, false, true, true, true]
+        },
+        {
+            "input": {
+                "operations": ["WordDictionary", "addWord", "addWord", "search", "search", "search", "search", "search"],
+                "arguments": [[], ["a"], ["a"], ["."], ["a"], ["aa"], ["a"], [".a"]]
+            },
+            "expectedOutput": [null, null, null, true, true, false, true, false]
+        },
+        {
+            "input": {
+                "operations": ["WordDictionary", "addWord", "addWord", "addWord", "search", "search", "search", "search", "search"],
+                "arguments": [[], ["at"], ["and"], ["an"], ["a"], [".at"], ["bat"], [".at"], ["an."]]
+            },
+            "expectedOutput": [null, null, null, null, false, false, false, false, true]
+        }
+    ],
+    "constraints": {
+        "wordLength": {"min": 1, "max": 25},
+        "maxDots": 2,
+        "maxCalls": 10000,
+        "charset": "lowercase English letters and '.'"
+    }
+}
