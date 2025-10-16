@@ -9,8 +9,12 @@ import (
 )
 
 type TrieNode struct {
-	children  []*TrieNode
+	children  map[rune]*TrieNode
 	endOfWord bool
+}
+
+func ConstructTrie() *TrieNode {
+	return &TrieNode{children: make(map[rune]*TrieNode)}
 }
 
 type WordDictionary struct {
@@ -18,15 +22,47 @@ type WordDictionary struct {
 }
 
 func Constructor() WordDictionary {
-	return WordDictionary{root: &TrieNode{}}
+	return WordDictionary{root: ConstructTrie()}
 }
 
 func (w *WordDictionary) addWord(word string) {
+	curr := w.root
+	for _, c := range word {
+		if _, ok := curr.children[c]; !ok {
+			curr.children[c] = ConstructTrie()
+		}
+		curr = curr.children[c]
+	}
+	curr.endOfWord = true
 
 }
 
 func (w *WordDictionary) search(word string) bool {
-	return true
+
+	var subSearch func(j int, curr *TrieNode) bool
+
+	subSearch = func(j int, curr *TrieNode) bool {
+		fmt.Println(word[j:], curr)
+		for i := j; i < len(word); i++ {
+			c := rune(word[i])
+			fmt.Println(i, string(c))
+			if c == '.' {
+				for _, val := range curr.children {
+					if subSearch(i+1, val) {
+						return true
+					}
+				}
+				return false
+
+			}
+			if _, ok := curr.children[c]; !ok {
+				return false
+			}
+			curr = curr.children[c]
+		}
+		return curr.endOfWord
+	}
+	return subSearch(0, w.root)
 
 }
 
