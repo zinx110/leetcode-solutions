@@ -42,7 +42,7 @@ if __name__ == "__main__":
     current_filename = os.path.abspath(__file__)
     current_dir = os.path.dirname(current_filename)
     testcase_path = os.path.join(current_dir, "testcase.json")
-    
+
     testcases = json.load(open(testcase_path))
     tests = testcases["tests"]
     passNum = 0 
