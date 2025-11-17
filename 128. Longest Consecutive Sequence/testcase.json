@@ -1,0 +1,41 @@
+{
+    "description": "Test cases for 128. Longest Consecutive Sequence",
+    "tests": [
+        {
+            "input": {
+                "nums": [100, 4, 200, 1, 3, 2]
+            },
+            "expectedOutput": 4
+        },
+        {
+            "input": {
+                "nums": [0, 3, 7, 2, 5, 8, 4, 6, 0, 1]
+            },
+            "expectedOutput": 9
+        },
+        {
+            "input": {
+                "nums": []
+            },
+            "expectedOutput": 0
+        },
+        {
+            "input": {
+                "nums": [1]
+            },
+            "expectedOutput": 1
+        },
+        {
+            "input": {
+                "nums": [9, 1, 4, 7, 3, -1, 0, 5, 8, -1, 6]
+            },
+            "expectedOutput": 7
+        }
+    ],
+    "constraints": {
+        "nums.length": {"min": 0, "max": 100000},
+        "nums[i]": {"min": -1000000000, "max": 1000000000},
+        "notes": "Array may contain duplicates; duplicates don't extend consecutive runs."
+    }
+}
+
